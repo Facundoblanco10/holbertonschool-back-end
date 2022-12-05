@@ -25,6 +25,6 @@ if __name__ == "__main__":
 
     for task in tasks:
         f.write('"{}","{}","{}","{}"\n'.format(user["id"],
-                                     user["username"],
-                                     task["completed"],
-                                     task["title"]))
+                                               user["username"],
+                                               task["completed"],
+                                               task["title"]))
