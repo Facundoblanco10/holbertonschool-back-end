@@ -8,7 +8,7 @@ if __name__ == "__main__":
     from urllib import request
 
     users_url = request.urlopen("https://jsonplaceholder.typicode.com"
-                               "/users")
+                                "/users")
     users = users_url.read().decode("utf-8")
     users = json.loads(users)
     f = open("todo_all_employees.json", "a")
@@ -26,9 +26,9 @@ if __name__ == "__main__":
                 tasks_completed.append(i)
         for task in tasks:
             user_json[user["id"]].append({
+                "username": user["username"],
                 "task": task["title"],
-                "completed": task["completed"],
-                "username": user["username"]
+                "completed": task["completed"]
             })
     f.write(json.dumps(user_json))
     f.close()
