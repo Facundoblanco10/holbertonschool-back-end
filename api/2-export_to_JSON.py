@@ -23,7 +23,6 @@ if __name__ == "__main__":
             tasks_completed.append(i)
     f = open("{}.json".format(user["id"]), "a")
 
-    
     user_json = {}
     user_json[user_id] = []
     for task in tasks:
