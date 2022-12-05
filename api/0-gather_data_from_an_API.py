@@ -10,11 +10,10 @@ if __name__ == "__main__":
 
 
     user_id = sys.argv[1]
-
     user_url = request.urlopen("https://jsonplaceholder.typicode.com"
-               "/users/{}".format(user_id))
+                               "/users/{}".format(user_id))
     tasks_url = request.urlopen("https://jsonplaceholder.typicode.com"
-               "/todos?userId={}".format(user_id))
+                                "/todos?userId={}".format(user_id))
     user = user_url.read().decode("utf-8")
     tasks = tasks_url.read().decode("utf-8")
     user = json.loads(user)
