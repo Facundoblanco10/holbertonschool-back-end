@@ -11,7 +11,7 @@ if __name__ == "__main__":
                                 "/users")
     users = users_url.read().decode("utf-8")
     users = json.loads(users)
-    f = open("todo_all_employees.json", "a")
+    f = open("todo_all_employees.json", "w")
 
     user_json = {}
     for user in users:
