@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """script that, using this REST API, for a given employee ID,"""
 """returns information about his/her TODO list progress."""
-import json
-from urllib import request
-import sys
 
 
 if __name__ == "__main__":
+    import json
+    import sys
+    from urllib import request
+
+
     user_id = sys.argv[1]
 
     user_url = request.urlopen("https://jsonplaceholder.typicode.com"
