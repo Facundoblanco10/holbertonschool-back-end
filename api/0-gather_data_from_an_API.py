@@ -8,7 +8,6 @@ if __name__ == "__main__":
     import sys
     from urllib import request
 
-
     user_id = sys.argv[1]
     user_url = request.urlopen("https://jsonplaceholder.typicode.com"
                                "/users/{}".format(user_id))
